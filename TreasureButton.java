@@ -41,12 +41,14 @@ public class TreasureButton extends EmptyButton
         super(inputInfo);
         
         info = inputInfo;
+        
+        setDisabledIcon(treasure);
     }
     
     // Purpose: Reveals the location and disables the button at the end of the game.
     public void endGame()
     {
-        setIcon(treasure);
         setEnabled(false);
+        setDisabledIcon(treasure);
     }
 }

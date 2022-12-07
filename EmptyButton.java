@@ -43,6 +43,7 @@ public class EmptyButton extends JButton
         ImageIcon empty = new ImageIcon("empty.JPG");
         setIcon(empty);
         setBackground(Color.WHITE);
+        setDisabledIcon(notreasure);
     }
     
     // Purpose: Disable the button when the game is over.

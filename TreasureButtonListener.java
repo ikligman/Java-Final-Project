@@ -35,16 +35,15 @@ public class TreasureButtonListener implements ActionListener
 {
     private TreasureButton button;
     private LastMovePanel lastMove;
-    private ImageIcon treasure = new ImageIcon("treasure.PNG");
-    private TreasureGame game;
+    private GameFieldPanel field;
     
     // Purpose: Constructor takes in a treasure button, info panel, and last move panel to reference.
-    public TreasureButtonListener(TreasureButton inputButton,
-                                    LastMovePanel inputLastMove, TreasureGame inputGame)
+    public TreasureButtonListener(TreasureButton inputButton, GameFieldPanel inputField,
+                                    LastMovePanel inputLastMove)
     {
         button = inputButton;
         lastMove = inputLastMove;
-        game = inputGame;
+        field = inputField;
     }
     
     /* Purpose: When clicked, a Treasure Button will:
@@ -54,13 +53,11 @@ public class TreasureButtonListener implements ActionListener
      */
     public void actionPerformed(ActionEvent e)
     {   
-        button.setIcon(treasure);
-        
         button.setEnabled(false);
         
-        game.foundTreasure();
-        
         lastMove.success();
+        
+        field.foundTreasure();
     }
     
 }

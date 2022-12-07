@@ -57,7 +57,7 @@ public class TreasureGameView extends JFrame
         
         south = new LastMovePanel();
         
-        center = new GameFieldPanel(west, south, new TreasureGame(west, center, south));
+        center = new GameFieldPanel(west, south);
         
         buildTitlePanel();
         

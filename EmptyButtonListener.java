@@ -34,16 +34,15 @@ public class EmptyButtonListener implements ActionListener
 {
     private EmptyButton button;
     private LastMovePanel lastMove;
-    private ImageIcon notreasure = new ImageIcon("notreasure.PNG");
-    private TreasureGame game;
+    private GameFieldPanel field;
     
     // Purpose: Constructor takes in an EmptyButton, GameInfoPanel, and LastMovePanel.
-    public EmptyButtonListener(EmptyButton inputButton,
-                                LastMovePanel inputLastMove, TreasureGame inputGame)
+    public EmptyButtonListener(EmptyButton inputButton, GameFieldPanel inputField,
+                                LastMovePanel inputLastMove)
     {
         button = inputButton;
         lastMove = inputLastMove;
-        game = inputGame;
+        field = inputField;
     }
     
     /* Purpose: When clicked, an Empty Button will:
@@ -52,13 +51,11 @@ public class EmptyButtonListener implements ActionListener
      */
     public void actionPerformed(ActionEvent e)
     {
-        button.setIcon(notreasure);
-        
         button.setEnabled(false);
         
-        game.foundNothing();
-        
         lastMove.fail();
+        
+        field.foundNothing();
     }
     
     

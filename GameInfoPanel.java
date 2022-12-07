@@ -54,46 +54,6 @@ public class GameInfoPanel extends JPanel
         add(triesLabel);
     }
     
-    // Purpose: count down tries.
-    // public void decrementTries()
-    //{
-       // if(tries > 0)
-       // {
-       //     tries--;
-       //     triesLabel.setText("Tries left: " + tries);
-       // }
-      //  if(tries == 0)
-      //  {
-        //    isGameOver = true;
-            
-            // JButton[] buttons = getButtons();
-       // }
-  //  }
-    
-    // Purpose: count down treasures.
-    //public void decrementTreasures()
-    //{
-     //   if(treasures > 0)
-     //       treasures--;
-            
-     //   remainingLabel.setText("Treasures left: " + treasures);
-   //}
-    
-    // Purpose: increment the found accumulator.
-   // public void incrementFound()
-   // {
-    //    if(found < 10)
-     //       found++;
-        
-     //   foundLabel.setText("Treasures found: " + found);
-   // }
-    
-    // Return whether or not it is game over.
-    public boolean getIsGameOver()
-    {
-        return isGameOver;
-    }
-    
     public void setTries(String inputString, int counter)
     {
         triesLabel.setText(inputString + counter);
