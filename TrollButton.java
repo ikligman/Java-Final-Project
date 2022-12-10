@@ -12,15 +12,15 @@
 
 /**
  *  |-----------------------------------------------------------|
- *  |                        TreasureButton                     |
+ *  |                        TrollButton                        |
  *  |-----------------------------------------------------------|
  *  |      Responsibilities         |   Collaborating Classes   |
  *  |-------------------------------+---------------------------|
- *  |     Create button functions   |   TreasureButtonListener  |
+ *  |     Create button functions   |   TrollButtonListener     |
  *  |                               |                           |
  *  |                               |         EmptyButton       |
  *  |                               |       GameFieldPanel      |
- *  |   Shows Treasure when picked  |        GameInfoPanel      |
+ *  |   Shows Troll when picked     |        GameInfoPanel      |
  *  |-------------------------------+---------------------------|
  */
 
@@ -28,15 +28,15 @@
 import javax.swing.*;
 import java.awt.*;
 
-public class TreasureButton extends EmptyButton
+public class TrollButton extends EmptyButton
 {
-    private ImageIcon treasure = new ImageIcon("treasure.PNG");
+    private ImageIcon troll = new ImageIcon("troll.PNG");
     
     // Purpose: Constructor passes the info panel to the superclass and sets the disabled icon.
-    public TreasureButton(GameInfoPanel inputInfo)
+    public TrollButton(GameInfoPanel inputInfo)
     {
         super(inputInfo);
         
-        setDisabledIcon(treasure);
+        setDisabledIcon(troll);
     }
 }

@@ -7,7 +7,7 @@
  * From Control Structures Through Objects. (6th ed.). Addison-Wesley. 
  * 
  *
- * Version: 12/3/2022
+ * Version: 12/7/2022
  */
 
 /**
@@ -28,17 +28,13 @@
 
 // Required library imports for GUI and event listeners.
 import javax.swing.*;
-import java.awt.event.*;
 import java.awt.*;
-import javax.swing.event.*;
 
 public class GameInfoPanel extends JPanel
 {
-    private LastMovePanel lastMove;
     private JLabel remainingLabel;
     private JLabel foundLabel;
     private JLabel triesLabel;
-    private boolean isGameOver = false;
     
     // Purpose: Constructor gives starting labels and sets the layout for the panel.
     public GameInfoPanel()
@@ -54,20 +50,21 @@ public class GameInfoPanel extends JPanel
         add(triesLabel);
     }
     
+    // Purpose: Update the tries label with inputed info.
     public void setTries(String inputString, int counter)
     {
         triesLabel.setText(inputString + counter);
     }
     
+    // Purpose: Update the remaining label with inputed info.
     public void setRemaining(String inputString, int counter)
     {
         remainingLabel.setText(inputString + counter);
     }
     
+    // Purpose: Update the found label with inputed info.
     public void setFound(String inputString, int counter)
     {
         foundLabel.setText(inputString + counter);
     }
 }
-    
-    

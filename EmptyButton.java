@@ -7,7 +7,7 @@
  * From Control Structures Through Objects. (6th ed.). Addison-Wesley. 
  * 
  *
- * Version: 12/3/2022
+ * Version: 12/7/2022
  */
 
 /**
@@ -26,29 +26,21 @@
 
 // Required library imports for GUI and event listeners.
 import javax.swing.*;
-import java.awt.event.*;
 import java.awt.*;
-import javax.swing.event.*;
 
 public class EmptyButton extends JButton
 {
     public GameInfoPanel info;
     private ImageIcon notreasure = new ImageIcon("notreasure.PNG");
+    private ImageIcon empty = new ImageIcon("empty.JPG");
     
     // Purpose: Constructor takes in the info panel and styles the unclicked button.
     public EmptyButton(GameInfoPanel inputInfo)
     {
         info = inputInfo;
         
-        ImageIcon empty = new ImageIcon("empty.JPG");
         setIcon(empty);
         setBackground(Color.WHITE);
         setDisabledIcon(notreasure);
-    }
-    
-    // Purpose: Disable the button when the game is over.
-    public void endGame()
-    {
-        setEnabled(false);
     }
 }

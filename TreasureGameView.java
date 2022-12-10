@@ -7,7 +7,7 @@
  * From Control Structures Through Objects. (6th ed.). Addison-Wesley. 
  * 
  *
- * Version: 12/3/2022
+ * Version: 12/7/2022
  */
 
 /**
@@ -26,9 +26,7 @@
 
 // Required library imports for GUI and event listeners.
 import javax.swing.*;
-import java.awt.event.*;
 import java.awt.*;
-import javax.swing.event.*;
 
 public class TreasureGameView extends JFrame
 {
@@ -49,8 +47,8 @@ public class TreasureGameView extends JFrame
     {
         setTitle("Treasure Hunt");
         
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); 
+
         setLayout(new BorderLayout());
         
         west = new GameInfoPanel();
@@ -82,6 +80,4 @@ public class TreasureGameView extends JFrame
         
         titlePanel.add(title);
     }
-    
-    
 }

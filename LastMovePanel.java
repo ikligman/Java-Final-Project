@@ -7,7 +7,7 @@
  * From Control Structures Through Objects. (6th ed.). Addison-Wesley. 
  * 
  *
- * Version: 12/3/2022
+ * Version: 12/7/2022
  */
 
 /**
@@ -26,9 +26,7 @@
 
 // Required library imports for GUI and event listeners.
 import javax.swing.*;
-import java.awt.event.*;
 import java.awt.*;
-import javax.swing.event.*;
 
 public class LastMovePanel extends JPanel
 {
@@ -52,6 +50,12 @@ public class LastMovePanel extends JPanel
     public void success()
     {
         lastMoveLabel.setText("Last Move: found treasure!");
+    }
+    
+    // Purpose: Will be activated if the user encounters a troll.
+    public void troll()
+    {
+        lastMoveLabel.setText("Last Move: robbed by a troll :(");
     }
     
     // Purpose: Will be activated if the user runs out of tries.

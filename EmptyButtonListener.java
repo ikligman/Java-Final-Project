@@ -7,7 +7,7 @@
  * From Control Structures Through Objects. (6th ed.). Addison-Wesley. 
  * 
  *
- * Version: 12/3/2022
+ * Version: 12/7/2022
  */
 
 /**
@@ -18,7 +18,7 @@
  *  |-------------------------------+---------------------------|
  *  |     Instruct what to do when  |         EmptyButton       |
  *  |  an empty button is clicked   |                           |
- *  |                               |         LastMovePanel     |
+ *  |                               |        LastMovePanel      |
  *  |                               |       GameFieldPanel      |
  *  |                               |        GameInfoPanel      |
  *  |-------------------------------+---------------------------|
@@ -55,8 +55,6 @@ public class EmptyButtonListener implements ActionListener
         
         lastMove.fail();
         
-        field.foundNothing();
+        field.reduceNumberOfTries();
     }
-    
-    
 }

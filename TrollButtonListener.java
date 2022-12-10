@@ -12,12 +12,12 @@
 
 /**
  *  |-----------------------------------------------------------|
- *  |                   TreasureButtonListener                  |
+ *  |                   TrollButtonListener                     |
  *  |-----------------------------------------------------------|
  *  |      Responsibilities         |   Collaborating Classes   |
  *  |-------------------------------+---------------------------|
- *  |     Instruct what to do when  |       TreasureButton      |
- *  |  a treasure button is clicked |                           |
+ *  |     Instruct what to do when  |       TrollButton         |
+ *  |  a troll button is clicked    |                           |
  *  |                               |        LastMovePanel      |
  *  |                               |       GameFieldPanel      |
  *  |                               |        GameInfoPanel      |
@@ -31,14 +31,14 @@ import java.awt.event.*;
 import java.awt.*;
 import javax.swing.event.*;
 
-public class TreasureButtonListener implements ActionListener
+public class TrollButtonListener implements ActionListener
 {
-    private TreasureButton button;
+    private TrollButton button;
     private LastMovePanel lastMove;
     private GameFieldPanel field;
     
-    // Purpose: Constructor takes in a treasure button, info panel, and last move panel to reference.
-    public TreasureButtonListener(TreasureButton inputButton, GameFieldPanel inputField,
+    // Purpose: Constructor takes in a troll button, info panel, and last move panel to reference.
+    public TrollButtonListener(TrollButton inputButton, GameFieldPanel inputField,
                                     LastMovePanel inputLastMove)
     {
         button = inputButton;
@@ -46,17 +46,16 @@ public class TreasureButtonListener implements ActionListener
         field = inputField;
     }
     
-    /* Purpose: When clicked, a Treasure Button will:
-     * show treasure icon, become unclickable, decrement the number of tries on the info panel, increment the
-     * number of treasures found on the info panel, decrement the number of remaining tresures on the info panel,
-     * and update the last move panel.
+    /* Purpose: When clicked, a Troll Button will:
+     * show troll icon, become unclickable, decrement the number of tries on the info panel, set found treasures
+     * to 0, and update the last move panel.
      */
     public void actionPerformed(ActionEvent e)
     {   
         button.setEnabled(false);
         
-        lastMove.success();
+        lastMove.troll();
         
-        field.foundTreasure();
+        field.foundTroll();
     }
 }
