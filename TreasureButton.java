@@ -7,7 +7,7 @@
  * From Control Structures Through Objects. (6th ed.). Addison-Wesley. 
  * 
  *
- * Version: 12/7/2022
+ * Version: 12/12/2022
  */
 
 /**
@@ -31,6 +31,7 @@ import java.awt.*;
 public class TreasureButton extends EmptyButton
 {
     private ImageIcon treasure = new ImageIcon("treasure.PNG");
+    private ImageIcon locked = new ImageIcon("locked.PNG");
     
     // Purpose: Constructor passes the info panel to the superclass and sets the disabled icon.
     public TreasureButton(GameInfoPanel inputInfo)
@@ -38,5 +39,12 @@ public class TreasureButton extends EmptyButton
         super(inputInfo);
         
         setDisabledIcon(treasure);
+    }
+    
+    // Purpose: Determine how a disabled treasure button should be revealed at end game.
+    public void reveal()
+    {
+        setDisabledIcon(locked);
+        setBackground(Color.GREEN);
     }
 }

@@ -7,7 +7,7 @@
  * From Control Structures Through Objects. (6th ed.). Addison-Wesley. 
  * 
  *
- * Version: 12/7/2022
+ * Version: 12/12/2022
  */
 
 /**
@@ -40,9 +40,6 @@ public class GameFieldPanel extends JPanel
     private EmptyButton[] buttons = new EmptyButton[25];
     private int[] treasurePositionArray = new int[10];
     private int[] trollPositionArray = new int[5];
-    private ImageIcon empty = new ImageIcon("empty.JPG");
-    private ImageIcon locked = new ImageIcon("locked.PNG");
-    private ImageIcon troll = new ImageIcon("troll.PNG");
     private int tries = 20;
     private int foundTreasures = 0;
     private int remainingTreasures = 10;
@@ -153,25 +150,7 @@ public class GameFieldPanel extends JPanel
         for(int i = 0; i<25; i++)
         {
             if(buttons[i].isEnabled())
-                buttons[i].setDisabledIcon(empty);
-            
-            if(contains(treasurePositionArray, i))
-            {
-                if(buttons[i].isEnabled())
-                {
-                    buttons[i].setDisabledIcon(locked);
-                    buttons[i].setBackground(Color.GREEN);
-                }
-            }
-            
-            if(contains(trollPositionArray, i))
-            {
-                if(buttons[i].isEnabled())
-                {
-                    buttons[i].setDisabledIcon(troll);
-                    buttons[i].setBackground(Color.RED);
-                }
-            }
+                buttons[i].reveal();
             
             buttons[i].setEnabled(false);
         }

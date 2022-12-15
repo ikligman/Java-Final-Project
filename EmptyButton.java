@@ -7,7 +7,7 @@
  * From Control Structures Through Objects. (6th ed.). Addison-Wesley. 
  * 
  *
- * Version: 12/7/2022
+ * Version: 12/12/2022
  */
 
 /**
@@ -42,5 +42,11 @@ public class EmptyButton extends JButton
         setIcon(empty);
         setBackground(Color.WHITE);
         setDisabledIcon(notreasure);
+    }
+    
+    // Purpose: Determine how a disabled empty button should be revealed at end game.
+    public void reveal()
+    {
+        setDisabledIcon(empty);
     }
 }

@@ -7,7 +7,7 @@
  * From Control Structures Through Objects. (6th ed.). Addison-Wesley. 
  * 
  *
- * Version: 12/7/2022
+ * Version: 12/12/2022
  */
 
 /**
@@ -38,5 +38,12 @@ public class TrollButton extends EmptyButton
         super(inputInfo);
         
         setDisabledIcon(troll);
+    }
+    
+    // Purpose: Determine how a disabled troll button should be revealed at end game.
+    public void reveal()
+    {
+        setDisabledIcon(troll);
+        setBackground(Color.RED);
     }
 }
