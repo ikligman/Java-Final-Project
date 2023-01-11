@@ -55,8 +55,8 @@ public class TreasureButtonListener implements ActionListener
     {   
         button.setEnabled(false);
         
-        lastMove.success();
+        lastMove.success(button.getPointsValue());
         
-        field.foundTreasure();
+        field.foundTreasure(button);
     }
 }

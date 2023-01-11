@@ -43,6 +43,7 @@ public class GameFieldPanel extends JPanel
     private int tries = 20;
     private int foundTreasures = 0;
     private int remainingTreasures = 10;
+    private int totalPoints = 0;
     
     // Purpose: Checks the inputted array for the inputed number. Returns true if the array has the number.
     public static boolean contains(int[] inputArray, int number)
@@ -177,7 +178,7 @@ public class GameFieldPanel extends JPanel
     }
     
     // Purpose: Adjust counters on the info panel when a treasure is found with input validation.
-    public void foundTreasure()
+    public void foundTreasure(TreasureButton currentButton)
     {
         if(remainingTreasures > 0)
             remainingTreasures--;
@@ -189,6 +190,10 @@ public class GameFieldPanel extends JPanel
         
         info.setFound("Treasures found: ", foundTreasures);
         
+        totalPoints += currentButton.getPointsValue();
+        
+        info.setPoints("Points: ", totalPoints);
+        
         reduceNumberOfTries();
     }
     
@@ -197,7 +202,11 @@ public class GameFieldPanel extends JPanel
     {
         foundTreasures = 0;
         
+        totalPoints = 0;
+        
         info.setFound("Treasures found: ", foundTreasures);
+        
+        info.setPoints("Points :", totalPoints);
         
         reduceNumberOfTries();
     }

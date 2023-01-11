@@ -47,9 +47,9 @@ public class LastMovePanel extends JPanel
     }
     
     // Purpose: Will be activated by action listeners if a treasure button is clicked.
-    public void success()
+    public void success(int points)
     {
-        lastMoveLabel.setText("Last Move: found treasure!");
+        lastMoveLabel.setText("Last Move: found treasure! +" + points + " points");
     }
     
     // Purpose: Will be activated if the user encounters a troll.

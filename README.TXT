@@ -1,12 +1,14 @@
 ------------------------------------------------------------------------
-This is the project README file. Here, you should describe your project.
-Tell the reader (someone who does not know anything about this project)
-all they need to know. The comments should usually include at least:
+Welcome to Treasure Hunt, a random chance based game! Try to find all 10
+treasures before you run out of tries or encounter a troll.
 ------------------------------------------------------------------------
 
-PROJECT TITLE:
-PURPOSE OF PROJECT:
-VERSION or DATE:
-HOW TO START THIS PROJECT:
-AUTHORS:
+PROJECT TITLE: Treasure Hunt
+PURPOSE OF PROJECT: Java Programming final project
+VERSION or DATE: 12/15/22
+AUTHORS: Ian Kligman
+
 USER INSTRUCTIONS:
+
+Double click the game icon to launch. Do not move the application outside of the game folder
+or the images won't work.

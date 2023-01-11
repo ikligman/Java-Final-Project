@@ -35,19 +35,22 @@ public class GameInfoPanel extends JPanel
     private JLabel remainingLabel;
     private JLabel foundLabel;
     private JLabel triesLabel;
+    private JLabel pointsLabel;
     
     // Purpose: Constructor gives starting labels and sets the layout for the panel.
     public GameInfoPanel()
     {
-        setLayout(new GridLayout(3,1));
+        setLayout(new GridLayout(4,1));
         
         remainingLabel = new JLabel("Treasures left: " + 10);
         foundLabel = new JLabel("Treasures found: " + 0);
         triesLabel = new JLabel("Tries left: " + 20);
+        pointsLabel = new JLabel("Points: " + 0);
         
         add(remainingLabel);
         add(foundLabel);
         add(triesLabel);
+        add(pointsLabel);
     }
     
     // Purpose: Update the tries label with inputed info.
@@ -66,5 +69,11 @@ public class GameInfoPanel extends JPanel
     public void setFound(String inputString, int counter)
     {
         foundLabel.setText(inputString + counter);
+    }
+    
+    // Purpose: Update the points label with inputed info.
+    public void setPoints(String inputString, int counter)
+    {
+        pointsLabel.setText(inputString + counter);
     }
 }
